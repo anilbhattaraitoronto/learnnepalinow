@@ -1,48 +1,3 @@
-// switchSections('.main-pages', '.main-link', '.active-main', 0);
-// // startLesson(0)
-// let startButton = document.querySelector("#start-button");
-
-
-// function startLesson(mainPageIndex = 0) {
-//     let mainPages = document.querySelectorAll('.main-pages')
-//     mainPages.forEach(mainPage => {
-//         mainPage.style.display = "none"
-//     })
-//     mainPages[mainPageIndex].style.display = "block"
-
-// }
-// // startButton.addEventListener('click', () => {
-// //     startLesson(1)
-// // })
-// // lessonMasthead.addEventListener('click', () => {
-// //     startLesson(0)
-// // })
-
-// function switchSections(sectionClass, linkClass, activeClass, index) {
-//     let sections = document.querySelectorAll(sectionClass)
-//     let links = document.querySelectorAll(linkClass)
-//     links.forEach(link => {
-//         link.classList.remove(activeClass)
-//         //what to replace = activeClass, what to replace with = ' '
-//     })
-//     sections.forEach(section => {
-//         section.style.display = 'none';
-//     })
-//     sections[index].style.display = 'block';
-//     links[index].classList.add(activeClass)
-// }
-// startButton.addEventListener('click', () => {
-//     switchSections('.main-pages', '.main-link', 'active-main', 1)
-//     let animatedContainer = document.querySelector("#landing-animated-characters")
-//     animatedContainer.classList.toggle("animate-characters")
-// })
-// lessonMasthead.addEventListener('click', () => {
-//     switchSections('.main-pages', '.main-link', 'active-main', 0)
-//     let animatedContainer = document.querySelector("#landing-animated-characters")
-//     animatedContainer.classList.toggle("animate-characters")
-// })
-
-
 startApp()
 
 
@@ -161,3 +116,244 @@ let compoundLesson = new Lesson(
 );
 compoundLesson.getItem("compound-box");
 compoundLesson.getDescription("compound-description");
+
+//Words Lessons
+let nounLesson = new Lesson(
+    ['नेपाली'],
+    ['english'],
+    ['sound'],
+    ['picture'],
+    "Nouns are things, people's proper names, place names, etc. You know what I mean. Practice, practice, practice. I cannot emphasize it enough."
+);
+nounLesson.getItem("noun-box");
+
+let pronounLesson = new Lesson(
+    ['नेपाली'],
+    ['english'],
+    ['sound'],
+    ['picture'],
+    "Pronouns are nouns that represent various nouns. Like I am Anil. My pronoun here is I. "
+);
+pronounLesson.getItem("pronoun-box");
+
+let verbLesson = new Lesson(
+    ['नेपाली'],
+    ['english'],
+    ['sound'],
+    ['picture'],
+    "Verbs are about action in the world. "
+);
+verbLesson.getItem("verb-box");
+
+let adjectiveLesson = new Lesson(
+    ['नेपाली'],
+    ['english'],
+    ['sound'],
+    ['picture'],
+    "Adjectives add color to the world. Meaning, it represents the quality of objects/nouns."
+);
+adjectiveLesson.getItem("adjective-box");
+
+let adverbLesson = new Lesson(
+    ['नेपाली'],
+    ['english'],
+    ['sound'],
+    ['picture'],
+    "Adverbs add quality to actions."
+
+);
+adverbLesson.getItem("adverb-box");
+
+let conjunctionLesson = new Lesson(
+    ['नेपाली'],
+    ['english'],
+    ['sound'],
+    ['picture'],
+    "Conjunctions connect different things."
+);
+conjunctionLesson.getItem("conjunction-box");
+
+let prepositionLesson = new Lesson(
+    ['नेपाली'],
+    ['english'],
+    ['sound'],
+    ['picture'],
+    "Prepositions are about the placements."
+);
+prepositionLesson.getItem("preposition-box");
+
+
+//Sentences Lessons
+
+let presentLesson = new Lesson(
+    ["मेरो नाम अनिल हो।"],
+    ["My name is Anil."],
+    [""],
+    ["picture"],
+    "Nepali sentence is organized as (Subject Object Verb). I home go. म घर जान्छु।"
+);
+presentLesson.getItem("present-box")
+
+let pastLesson = new Lesson(
+    ["मेरो नाम अनिल थियो।"],
+    ["My name was Anil."],
+    [""],
+    ["picture"],
+    "Past sentences describe things that happened in the past."
+);
+pastLesson.getItem("past-box");
+
+let futureLesson = new Lesson(
+    ["मेरो नाम अनिल हुनेछ।"],
+    ["My name will be Anil."],
+    [""],
+    ["picture"],
+    "Future sentences describe things that will happen in future. Obviously, indeed."
+);
+futureLesson.getItem("future-box");
+
+// Readings Lessons
+
+let beginnerReadings = new Lesson(
+    [
+        "१।",
+        "२।",
+        "३।",
+        "४।",
+        "५।",
+        "६।",
+        "७।",
+        "८।",
+        "९।",
+        "१०।",
+        "११।",
+        "१२।",
+        "१३।",
+        "१४।",
+        "१५।",
+        "१६।",
+        "१७।",
+        "१८।",
+        "१९।",
+        "२०।",
+    ],
+    [
+        "१", "२", "३", "४", "५", "६", "७", "८", "९", "१०", "११", "१२", "१३", "१४", "१५", "१६", "१७", "१८", "१९", "२०",
+    ],
+    [
+        "१", "२", "३", "४", "५", "६", "७", "८", "९", "१०", "११", "१२", "१३", "१४", "१५", "१६", "१७", "१८", "१९", "२०",
+    ],
+    [
+        "१", "२", "३", "४", "५", "६", "७", "८", "९", "१०", "११", "१२", "१३", "१४", "१५", "१६", "१७", "१८", "१९", "२०",
+    ],
+    "Beginner lesson will focus on simple constructions of words and sentences."
+);
+beginnerReadings.getItem("beginner-box");
+
+let intermediateReadings = new Lesson(
+    [
+        "१।",
+        "२।",
+        "३।",
+        "४।",
+        "५।",
+        "६।",
+        "७।",
+        "८।",
+        "९।",
+        "१०।",
+        "११।",
+        "१२।",
+        "१३।",
+        "१४।",
+        "१५।",
+        "१६।",
+        "१७।",
+        "१८।",
+        "१९।",
+        "२०।",
+    ],
+    [
+        "१", "२", "३", "४", "५", "६", "७", "८", "९", "१०", "११", "१२", "१३", "१४", "१५", "१६", "१७", "१८", "१९", "२०",
+    ],
+    [
+        "१", "२", "३", "४", "५", "६", "७", "८", "९", "१०", "११", "१२", "१३", "१४", "१५", "१६", "१७", "१८", "१९", "२०",
+    ],
+    [
+        "१", "२", "३", "४", "५", "६", "७", "८", "९", "१०", "११", "१२", "१३", "१४", "१५", "१६", "१७", "१८", "१९", "२०",
+    ],
+    "We will move up the ladder as we keep practicing our reading skills. Have you finished reading these twenty blocks of writings? Do finish. "
+);
+intermediateReadings.getItem("intermediate-box");
+
+let advancedReadings = new Lesson(
+    [
+        "१।",
+        "२।",
+        "३।",
+        "४।",
+        "५।",
+        "६।",
+        "७।",
+        "८।",
+        "९।",
+        "१०।",
+        "११।",
+        "१२।",
+        "१३।",
+        "१४।",
+        "१५।",
+        "१६।",
+        "१७।",
+        "१८।",
+        "१९।",
+        "२०।",
+    ],
+    [
+        "१", "२", "३", "४", "५", "६", "७", "८", "९", "१०", "११", "१२", "१३", "१४", "१५", "१६", "१७", "१८", "१९", "२०",
+    ],
+    [
+        "१", "२", "३", "४", "५", "६", "७", "८", "९", "१०", "११", "१२", "१३", "१४", "१५", "१६", "१७", "१८", "१९", "२०",
+    ],
+    [
+        "१", "२", "३", "४", "५", "६", "७", "८", "९", "१०", "११", "१२", "१३", "१४", "१५", "१६", "१७", "१८", "१९", "२०",
+    ],
+    "At advanced level, you are almost like a Nepali person. Like my french level now. Maybe a bit better than that. "
+);
+advancedReadings.getItem("advanced-box");
+
+let nativeReadings = new Lesson(
+    [
+        "१।",
+        "२।",
+        "३।",
+        "४।",
+        "५।",
+        "६।",
+        "७।",
+        "८।",
+        "९।",
+        "१०।",
+        "११।",
+        "१२।",
+        "१३।",
+        "१४।",
+        "१५।",
+        "१६।",
+        "१७।",
+        "१८।",
+        "१९।",
+        "२०।",
+    ],
+    [
+        "१", "२", "३", "४", "५", "६", "७", "८", "९", "१०", "११", "१२", "१३", "१४", "१५", "१६", "१७", "१८", "१९", "२०",
+    ],
+    [
+        "१", "२", "३", "४", "५", "६", "७", "८", "९", "१०", "११", "१२", "१३", "१४", "१५", "१६", "१७", "१८", "१९", "२०",
+    ],
+    [
+        "१", "२", "३", "४", "५", "६", "७", "८", "९", "१०", "११", "१२", "१३", "१४", "१५", "१६", "१७", "१८", "१९", "२०",
+    ],
+    "This is where you will feel that you are born in Nepali family speaking Nepali day in day out. Welcome. Venture out. Practice, practice, practice."
+);
+nativeReadings.getItem("native-box");
