@@ -16,7 +16,7 @@ function switchSections(sectionClass, linkClass, activeLinkClass, index = 0) {
         //what to replace = activeClass, what to replace with = ' '
     })
     sections[index].style.display = 'block'
-    navLinks[index].clasName += activeLinkClass
+    navLinks[index].className += activeLinkClass
 }
 
 function startApp() {
