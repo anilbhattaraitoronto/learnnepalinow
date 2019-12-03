@@ -92,7 +92,7 @@ body{
     align-items: center;
     height: 155px;
     width: 155px;
-    margin: auto;
+    margin: 20px auto;
     border-radius: 50%;
     background:var(--themeWhite, white);
 }
