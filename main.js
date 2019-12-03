@@ -20,14 +20,14 @@ function switchSections(sectionClass, linkClass, activeLinkClass, index = 0) {
 }
 
 function startApp() {
-    switchSections('.main-pages', '.main-link', ' active-main-link', 0)
     let animatedContainer = document.querySelector("#landing-animated-characters")
     animatedContainer.classList.toggle("animate-characters")
-    switchSections('.levels', '.level-link', ' active-level', 0);
-    switchSections('.beginner-lesson', '.beginner-lesson-link', ' active-lesson', 0);
-    switchSections('.intermediate-lesson', '.intermediate-lesson-link', ' active-lesson', 0);
-    switchSections('.advanced-lesson', '.advanced-lesson-link', ' active-lesson', 0);
-    switchSections('.about-section', '.about-section-link', ' active-lesson', 0);
+    switchSections('.main-pages', '.main-link', ' active-main-link', 0)
+    switchSections('.levels', '.level-link', ' active-level', 0)
+    switchSections('.beginner-lesson', '.beginner-lesson-link', ' active-lesson', 0)
+    switchSections('.intermediate-lesson', '.intermediate-lesson-link', ' active-lesson', 0)
+    switchSections('.advanced-lesson', '.advanced-lesson-link', ' active-lesson', 0)
+    switchSections('.about-section', '.about-section-link', ' active-lesson', 0)
 }
 
 startButton.addEventListener('click', () => {
@@ -59,29 +59,29 @@ function Lesson(nepali, english, sound, picture, description) {
         </audio>
         <div class="picture">${this.picture[this.itemIndex]}</div>
         `
-        itemBox.innerHTML = item;
+        itemBox.innerHTML = item
     }
     this.getDescription = function (id) {
-        let descriptionBox = document.getElementById(id);
+        let descriptionBox = document.getElementById(id)
 
-        descriptionBox.innerHTML += `<p>${this.description}</p>`;
+        descriptionBox.innerHTML += `<p>${this.description}</p>`
     }
 
     this.getNextItem = function (id) {
-        this.itemIndex++;
+        this.itemIndex++
 
         if (this.itemIndex === this.nepali.length) {
-            this.itemIndex = 0;
+            this.itemIndex = 0
         }
-        this.getItem((id = id));
+        this.getItem((id = id))
     };
 
     this.getPreviousItem = function (id) {
-        this.itemIndex--;
+        this.itemIndex--
         if (this.itemIndex < 0) {
-            this.itemIndex = this.nepali.length - 1;
+            this.itemIndex = this.nepali.length - 1
         }
-        this.getItem((id = id));
+        this.getItem((id = id))
     };
 }
 
@@ -104,8 +104,8 @@ let syllableLesson = new Lesson(
     ["ka.png", "kha.mp3", "ga.mp3", "gha", "nga", "cha", "chha", "ja", "jha", "yan", "ta", "tha", "da", "dha", "nna", "tta", "ttha", "dda", "ddha", "na", "pa", "pha", "ba", "bha", "ma", "ya", "ra", "la", "va", "sa", "ssha", "sha", "ha", "chya", "tra", "gyan"],
     "These 36 syllables are another building blocks of Nepali language. These syllables are formed through the combination of the first vowel अ and 36 root consonants. One example is: क्‌ + अ = क । Now you can see how others are formed. Practice writing. There is no other way to learn a language than to practicing the building blocks. "
 );
-syllableLesson.getItem("syllable-box");
-syllableLesson.getDescription("syllable-description");
+syllableLesson.getItem("syllable-box")
+syllableLesson.getDescription("syllable-description")
 
 let compoundLesson = new Lesson(
     ["क", "का", "कि", "की", "कु", "कू", "के", "कै", "को", "कौ", "कं", "क:"],
@@ -114,8 +114,8 @@ let compoundLesson = new Lesson(
     ["ka.png", "kaa.png", "ki.png", "kee.png", "ku.png", "koo.png", "ke.png", "kai.png", "ko.png", "kau.png", "kam.png", "kaha.png"],
     "Compounds are formed by the combination of roots and each of the 12 vowels such that: क् + अ = क, क् + आ = का, and so on. Practice, practice, practice. I cannot emphasize this core task of learning language."
 );
-compoundLesson.getItem("compound-box");
-compoundLesson.getDescription("compound-description");
+compoundLesson.getItem("compound-box")
+compoundLesson.getDescription("compound-description")
 
 //Words Lessons
 let nounLesson = new Lesson(
@@ -125,7 +125,7 @@ let nounLesson = new Lesson(
     ['picture'],
     "Nouns are things, people's proper names, place names, etc. You know what I mean. Practice, practice, practice. I cannot emphasize it enough."
 );
-nounLesson.getItem("noun-box");
+nounLesson.getItem("noun-box")
 nounLesson.getDescription("noun-description")
 
 let pronounLesson = new Lesson(
@@ -135,7 +135,7 @@ let pronounLesson = new Lesson(
     ['picture'],
     "Pronouns are nouns that represent various nouns. Like I am Anil. My pronoun here is I. "
 );
-pronounLesson.getItem("pronoun-box");
+pronounLesson.getItem("pronoun-box")
 pronounLesson.getDescription("pronoun-description")
 
 let verbLesson = new Lesson(
@@ -145,7 +145,7 @@ let verbLesson = new Lesson(
     ['picture'],
     "Verbs are about action in the world. "
 );
-verbLesson.getItem("verb-box");
+verbLesson.getItem("verb-box")
 verbLesson.getDescription("verb-description")
 
 let adjectiveLesson = new Lesson(
@@ -155,7 +155,7 @@ let adjectiveLesson = new Lesson(
     ['picture'],
     "Adjectives add color to the world. Meaning, it represents the quality of objects/nouns."
 );
-adjectiveLesson.getItem("adjective-box");
+adjectiveLesson.getItem("adjective-box")
 adjectiveLesson.getDescription("adjective-description")
 
 let adverbLesson = new Lesson(
@@ -166,7 +166,7 @@ let adverbLesson = new Lesson(
     "Adverbs add quality to actions."
 
 );
-adverbLesson.getItem("adverb-box");
+adverbLesson.getItem("adverb-box")
 adverbLesson.getDescription("adverb-description")
 
 let conjunctionLesson = new Lesson(
@@ -176,7 +176,7 @@ let conjunctionLesson = new Lesson(
     ['picture'],
     "Conjunctions connect different things."
 );
-conjunctionLesson.getItem("conjunction-box");
+conjunctionLesson.getItem("conjunction-box")
 conjunctionLesson.getDescription("conjunction-description")
 
 let prepositionLesson = new Lesson(
@@ -186,7 +186,7 @@ let prepositionLesson = new Lesson(
     ['picture'],
     "Prepositions are about the placements."
 );
-prepositionLesson.getItem("preposition-box");
+prepositionLesson.getItem("preposition-box")
 prepositionLesson.getDescription("preposition-description")
 
 
@@ -209,7 +209,7 @@ let pastLesson = new Lesson(
     ["picture"],
     "Past sentences describe things that happened in the past."
 );
-pastLesson.getItem("past-box");
+pastLesson.getItem("past-box")
 pastLesson.getDescription("past-description")
 
 let futureLesson = new Lesson(
@@ -219,7 +219,7 @@ let futureLesson = new Lesson(
     ["picture"],
     "Future sentences describe things that will happen in future. Obviously, indeed."
 );
-futureLesson.getItem("future-box");
+futureLesson.getItem("future-box")
 futureLesson.getDescription("future-description")
 
 // Readings Lessons
@@ -258,7 +258,7 @@ let beginnerReadings = new Lesson(
     ],
     "Beginner lesson will focus on simple constructions of words and sentences."
 );
-beginnerReadings.getItem("beginner-box");
+beginnerReadings.getItem("beginner-box")
 beginnerReadings.getDescription("beginner-description")
 
 let intermediateReadings = new Lesson(
@@ -295,7 +295,7 @@ let intermediateReadings = new Lesson(
     ],
     "We will move up the ladder as we keep practicing our reading skills. Have you finished reading these twenty blocks of writings? Do finish. "
 );
-intermediateReadings.getItem("intermediate-box");
+intermediateReadings.getItem("intermediate-box")
 intermediateReadings.getDescription("intermediate-description")
 
 let advancedReadings = new Lesson(
@@ -332,7 +332,7 @@ let advancedReadings = new Lesson(
     ],
     "At advanced level, you are almost like a Nepali person. Like my french level now. Maybe a bit better than that. "
 );
-advancedReadings.getItem("advanced-box");
+advancedReadings.getItem("advanced-box")
 adverbLesson.getDescription("advanced-description")
 
 let nativeReadings = new Lesson(
@@ -369,5 +369,5 @@ let nativeReadings = new Lesson(
     ],
     "This is where you will feel that you are born in Nepali family speaking Nepali day in day out. Welcome. Venture out. Practice, practice, practice."
 );
-nativeReadings.getItem("native-box");
+nativeReadings.getItem("native-box")
 nativeReadings.getDescription("native-description")
