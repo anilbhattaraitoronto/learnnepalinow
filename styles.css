@@ -146,57 +146,22 @@ body{
 #lesson-page{
     margin: auto;
 }
-#home-page h3{
-    margin: auto;
-    /* border-radius: 8px; */
-    padding: 5px 0 0 0;
-    color: white;
-}
-.why-nepali{
-    width: 80%;
-    padding: 5px;
-    margin: auto;
-    box-shadow: 0 0 3px var(--theme2);
-    border-radius: 8px;
-    /* border: 1px solid var(--theme2); */
-}
-.why-nepali li{
-    list-style-type: none;
-    padding: 12px 0;
-    color: var(--theme2);
-    font-size: .8em;
-    box-shadow: 0 0 1px white;
-}
-#home-page #start-lesson-button{
-    border:none;
-    height: 150px;
-    width: 150px;
-    cursor: pointer;
-    margin: 8px auto;
-    font-size: 1.2em;
-    border-radius: 50%;
-    background: white;
-    color: var(--theme1);
-    transition: 400ms ease-out;
-    animation: masthead 5s ease-in-out infinite alternate;
-}
-#home-page #start-lesson-button:hover{
-    box-shadow: 0 0 20px white;
-}
+
+
 .main-nav{
-    width: 330px;
+    width: 100%;
     margin: auto;
     text-align: center;
 }
 .level-nav{
-    width: 330px;
+    width: 100%;
     margin: auto;
     text-align: center;
 }
 .level-link{
     display: inline-block;
     list-style-type: none;
-    color: white;
+    color: var(--themeWhite, white);
     cursor: pointer;
     font-size: .8em;
     padding: 2px 8px;
@@ -205,13 +170,14 @@ body{
     font-weight: 600;
 }
 .level-link:hover{
-    color: var(--theme2);
+    background: var(--themeWhite);
+    color: var(--themeBlue);
 }
 
 .lesson-link{
     display: inline-block;
     list-style-type: none;
-    color: white;
+    color: var(--themeWhite, white);
     cursor: pointer;
     font-size: .8em;
     padding: 2px;
@@ -220,7 +186,7 @@ body{
     font-weight: 500;
 }
 .active-level{
-    color: var(--theme2);
+    background: var(--themeRed, darkred);
 }
 .active-lesson, .lesson-link:hover{
 color: darkgreen;
@@ -265,8 +231,8 @@ background: white;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    background: var(--theme1);
-    color: white;
+    background: var(--themeBlue);
+    color: var(--themeWhite, white);
     font-size: 4em;
     line-height: 0;
     height: 150px;
@@ -277,10 +243,10 @@ background: white;
     position: absolute;
     top: 20px;
     left: 20px;
-    color: var(--theme2);
+    color: var(--themeWhite, white);
     padding: 10px;
     border-radius: 50%;
-    background: var(--theme1);
+    background: var(--themeBlue);
     box-shadow: 0 0 5px white;
     font-size: 1.3em;
 }
@@ -417,8 +383,8 @@ background: white;
     border: none;
     padding: 5px;
     font-size: .8em;
-    background: var(--theme1);
-    color: white;
+    background: var(--themeBlue);
+    color: var(--themeWhite, white);
     position: absolute;
     top: 50%;
     left: 0;
@@ -430,8 +396,8 @@ background: white;
     border: none;
     padding: 5px;
     font-size: .8em;
-    background: var(--theme1);
-    color: white;
+    background: var(--themeBlue);
+    color: var(--themeWhite, white);
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -439,7 +405,7 @@ background: white;
     box-shadow: 0 0 1px white;
 }
 .prev:hover, .next:hover{
-    color: var(--theme2);
+    background: var(--themeRed, darkred);
 }
 #syllable-description{
     display: grid;
@@ -449,13 +415,11 @@ background: white;
     border: 1px solid var(--theme1);
 }
 #vowel-description, #compound-description{
-    display: grid;
-    grid-template-columns: repeat(6, auto);
-    grid-gap: 5px;
+    width: 90%;
     margin: auto;
     border: 1px solid var(--theme1);
 }
-#vowel-description >div, #syllable-description > div, #compound-description > div{
+#vowel-description >p, #syllable-description > p, #compound-description > p{
     background: white;
     border-radius: 2px;
 }
