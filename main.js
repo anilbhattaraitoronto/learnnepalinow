@@ -1,6 +1,5 @@
 startApp()
 
-
 let startButton = document.getElementById('start-button')
 let lessonMasthead = document.querySelector(".masthead")
 
@@ -40,6 +39,8 @@ lessonMasthead.addEventListener('click', () => {
     let animatedContainer = document.querySelector("#landing-animated-characters")
     animatedContainer.classList.toggle("animate-characters")
 })
+
+//Lesson constructor (sort of) function
 
 function Lesson(nepali, english, sound, picture, description) {
     this.nepali = nepali

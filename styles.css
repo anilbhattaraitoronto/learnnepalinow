@@ -4,9 +4,12 @@
 *{
     margin: 0;
     padding: 0;
+    /* --themeBlue: #003893; */
+    /* --themeRed: #DC143C; */
+    --themeWhite: #FFFFFF;
     --themeBlue: rgb(7, 7, 100);
-    --themeRed: rgb(134, 9, 34);
-    --themeWhite: rgb(240, 240, 248);
+    --themeRed: rgb(221, 11, 53);
+    /* --themeWhite: rgb(240, 240, 248); */
 }
 body{
     font-family: Arial;
@@ -57,6 +60,12 @@ body{
     word-spacing: 2px;
     font-style: italic;
     margin-top: -8px;
+}
+.masthead img{
+    /* float:left; */
+    width: 32px;
+    height: 32px;
+    padding-top: 12px;
 }
 #landing-animated-characters{
     overflow: hidden;
