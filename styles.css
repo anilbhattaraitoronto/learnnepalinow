@@ -171,7 +171,7 @@ body{
 }
 .level-link:hover{
     background: var(--themeWhite);
-    color: var(--themeBlue);
+    color: var(--themeRed, darkred);
 }
 
 .lesson-link{
@@ -220,7 +220,7 @@ background: white;
     align-items: center;
     width: 300px;
     height: 300px;
-    background: white;
+    background: var(--themeWhite, white);
     margin: 0 auto 20px auto;
     box-shadow: 1px 1px 2px gray;
     border-radius: 8px;
@@ -231,7 +231,7 @@ background: white;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    background: var(--themeBlue);
+    background: var(--themeBlue, darkblue);
     color: var(--themeWhite, white);
     font-size: 4em;
     line-height: 0;
@@ -246,7 +246,7 @@ background: white;
     color: var(--themeWhite, white);
     padding: 10px;
     border-radius: 50%;
-    background: var(--themeBlue);
+    background: var(--themeBlue, darkblue);
     box-shadow: 0 0 5px white;
     font-size: 1.3em;
 }
@@ -267,7 +267,6 @@ background: white;
 }
 #noun-box > .sound, #pronoun-box > .sound, #verb-box > .sound, #adjective-box > .sound, #adverb-box > .sound, #conjunction-box > .sound, #preposition-box > .sound, #present-box > .sound, #past-box > .sound, #future-box > .sound, #beginner-box > .sound, #intermediate-box > .sound, #advanced-box > .sound, #native-box > .sound{
     display: none;
-
 }
 #noun-box > .picture, #pronoun-box > .picture, #verb-box > .picture, #adjective-box > .picture, #adverb-box > .picture, #conjunction-box > .picture, #preposition-box > .picture{
     display: flex;
@@ -279,7 +278,7 @@ background: white;
     transform: translateX(-50%);
     width: 120px;
     height: 120px;
-    background: var(--theme1);
+    background: var(--themeBlue, darkblue);
     border-radius: 8px;
     color: white;
 }
@@ -292,10 +291,10 @@ background: white;
     width: 130px;
     padding: 8px;
     border-radius: 8px;
-    color: var(--theme1);
+    color: var(--themeBlue, darkblue);
     right: 2px;
     bottom: 2px;
-    box-shadow: 0 0 2px var(--theme1);
+    box-shadow: 0 0 2px var(--themeBlue, darkblue);
 }
 #noun-box > .english, #pronoun-box > .english, #verb-box > .english, #adjective-box > .english, #adverb-box > .english, #conjunction-box > .english, #preposition-box > .english {
     display: flex;
@@ -308,8 +307,8 @@ background: white;
     left: 2px;
     text-align: center;
     border-radius: 8px;
-    color: var(--theme1);
-    box-shadow: 0 0 2px var(--theme1);
+    color: var(--themeBlue, darkblue);
+    box-shadow: 0 0 2px var(--themeBlue, darkblue);
 }
 #present-box > .picture, #past-box > .picture, #future-box > .picture{
     display: flex;
@@ -321,8 +320,8 @@ background: white;
     transform: translate(-50%,-50%);
     width: 200px;
     height: 120px;
-    background: var(--theme1);
-    color: white;
+    background: var(--themeBlue, darkblue);
+    color: var(--themeWhite, white);
     border-radius: 8px;
 }
 #present-box > .nepali, #past-box > .nepali, #future-box > .nepali{
@@ -333,10 +332,10 @@ background: white;
     top: 30px;
     width: 280px;
     height: 50px;
-    border: 1px solid var(--theme1);
+    border: 1px solid var(--themeBlue, darkblue);
     left: 50%;
     transform: translateX(-50%);
-    color: var(--theme1);
+    color: var(--themeBlue, darkblue);
 }
 #present-box > .english, #past-box > .english, #future-box > .english{
     display: flex;
@@ -346,10 +345,10 @@ background: white;
     bottom: 30px;
     width: 280px;
     height: 50px;
-    border: 1px solid var(--theme1);
+    border: 1px solid var(--themeBlue, darkblue);
     left: 50%;
     transform: translateX(-50%);
-    color: var(--theme1);
+    color: var(--themeBlue, darkblue);
 }
 
 #beginner-box > .picture, #intermediate-box > .picture, #advanced-box > .picture, #native-box > .picture{
@@ -357,7 +356,7 @@ background: white;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    color: var(--theme1);
+    color: var(--themeBlue, darkblue);
 }
 
 #beginner-box > .nepali, #intermediate-box > .nepali, #advanced-box > .nepali, #native-box > .nepali{
@@ -367,9 +366,9 @@ background: white;
     transform: translate(-50%, -50%);
     width: 220px;
     height: 220px;
-    box-shadow: 0 0 2px var(--theme1);
+    box-shadow: 0 0 2px var(--themeBlue, darkblue);
     border-radius: 8px;
-    color: var(--theme1);
+    color: var(--themeBlue, darkblue);
     padding: 8px;
     text-align: left;
 
@@ -383,7 +382,7 @@ background: white;
     border: none;
     padding: 5px;
     font-size: .8em;
-    background: var(--themeBlue);
+    background: var(--themeBlue, darkblue);
     color: var(--themeWhite, white);
     position: absolute;
     top: 50%;
@@ -396,7 +395,7 @@ background: white;
     border: none;
     padding: 5px;
     font-size: .8em;
-    background: var(--themeBlue);
+    background: var(--themeBlue, darkblue);
     color: var(--themeWhite, white);
     position: absolute;
     top: 50%;
@@ -412,20 +411,20 @@ background: white;
     grid-template-columns: repeat(5, auto);
     grid-gap: 5px;
     margin: auto;
-    border: 1px solid var(--theme1);
+    border: 1px solid var(--themeBlue, darkblue);
 }
 #vowel-description, #compound-description{
     width: 90%;
     margin: auto;
-    border: 1px solid var(--theme1);
+    border: 1px solid var(--themeBlue, darkblue);
 }
-#vowel-description >p, #syllable-description > p, #compound-description > p{
-    background: white;
+#vowel-description >p, #syllable-description > p, #compound-description > p, #noun-description, #pronoun-description, #verb-description, #adjective-description, #adverb-description, #conjunction-description, #preposition-description, #present-description, #past-description, #future-description, #beginner-description, #intermediate-description, #advanced-description, #native-description{
+    background: var(--themeWhite, white);
     border-radius: 2px;
 }
 footer{
     margin: auto;
-    color: var(--theme2);
+    color: var(--themeRed, darkred);
     padding: 10px 0;
     text-align: center;
     font-size: .8em;
