@@ -11,10 +11,11 @@
 </head>
 <body>
     <section id="app-wrapper">
-        <!-- --Landing Page Begins Below-- -->
+        <header id="main-header">
+            <h1 id="landing-masthead" class="masthead main-link active-main-link">Learn Nepali Now</h1>
+        </header>
+            <!-- --Landing Page Begins Below-- -->
         <main class="main-pages" id="landing-page">
-            <header id="landing-header">
-                <h1 id="landing-masthead" class="masthead">Learn Nepali Now</h1>
                 <h3 id="landing-animated-characters">
                     अ आ इ ई उ ऊ ए ऐ ओ औ अं अ: <br>
                     क् ख् ग् घ् ङ् ............... ज्ञ् <br>
@@ -23,7 +24,7 @@
                 </h3>
             </header>
             <section id="start-button-container">
-                <button id="start-button">Start Learning</button>
+                <button id="start-button" class="main-link active-main-link">Start Learning</button>
             </section>
             <section id="why-nepali">
                 <h3 class="why-nepali-title">Why Learn Nepali</h3>
@@ -38,10 +39,223 @@
         <!--Landing Page Ends-->
 
         <!-- --Lesson Page Begins Below-- -->
-        <main class="main-pages" id="lesson-page">
-            <h1 id="lesson-masthead" class="masthead">Learn Nepali Now</h1>
+       <!--Lesson Page Begins-->
+       <main class="main-pages" id="lesson-page">
+            <nav class="main-nav">
+                <li class="level-link" onclick="switchSections('.levels', '.level-link', ' active-level', 0)" >Letters</li>
+                <li class="level-link" onclick="switchSections('.levels', '.level-link', ' active-level', 1)" >Words</li>
+                <li class="level-link" onclick="switchSections('.levels', '.level-link', ' active-level', 2)" >Sentences</li>
+                <li class="level-link" onclick="switchSections('.levels', '.level-link', ' active-level', 3)" >Readings</li>
+            </nav>
+            <section class="levels">
+                <h2 class="level-title">Letters </h2>
+                <nav class="level-nav">
+                    <li class="lesson-link beginner-lesson-link" onclick="switchSections('.beginner-lesson', '.beginner-lesson-link', ' active-lesson', 0)" >Vowels</li>
+                    <li class="lesson-link beginner-lesson-link" onclick="switchSections('.beginner-lesson', '.beginner-lesson-link', ' active-lesson', 1)" >Syllables</li>
+                    <li class="lesson-link beginner-lesson-link" onclick="switchSections('.beginner-lesson', '.beginner-lesson-link', ' active-lesson', 2)" >Compounds</li>
+                </nav>
+                <div class="beginner-lesson">
+                    <section class="lesson-box">
+                        <h3 class="lesson-title">Vowels</h3>
+                        <div class="item-box" id="vowel-box"></div>
+                        <button class="prev" onclick="vowelLesson.getPreviousItem('vowel-box')" >Prev</button>
+                        <button class="next" onclick="vowelLesson.getNextItem('vowel-box')" >Next</button>
+                    </section>
+                    <section class="description-box" id="vowel-description"></section>
+                </div>
+                <div class="beginner-lesson">
+                    
+                    <section class="lesson-box">
+                        <h3 class="lesson-title">Syllables</h3>
+                        <div class="item-box" id="syllable-box"></div>
+                        <!-- <button class="prev" onclick="syllableLesson.getPreviousItem('syllable-box')" >Prev</button> -->
+                        <!-- <button class="next" onclick="syllableLesson.getNextItem('syllable-box')" >Next</button> -->
+                    </section>
+                    <section class="description-box" id = "syllable-description"></section>
+                </div>
+                <div class="beginner-lesson">
+                    
+                    <section class="lesson-box">
+                        <h3 class="lesson-title">Compounds</h3>
+                        <div class="item-box" id="compound-box"></div>
+                        <!-- <button class="prev" onclick="compoundLesson.getPreviousItem('compound-box')" >Prev</button> -->
+                        <!-- <button class="next" onclick="compoundLesson.getNextItem('compound-box')" >Next</button> -->
+                    </section>
+                    <section class="description-box" id = "compound-description"></section>
+                </div>
+            </section>
+            <section class="levels">
+                <h2 class="level-title">Words </h2>
+                <nav class="level-nav">
+                    <li class="lesson-link intermediate-lesson-link" onclick="switchSections('.intermediate-lesson', '.intermediate-lesson-link', ' active-lesson', 0)" >Noun</li>
+                    <li class="lesson-link intermediate-lesson-link" onclick="switchSections('.intermediate-lesson', '.intermediate-lesson-link', ' active-lesson', 1)" >Pronoun</li>
+                    <li class="lesson-link intermediate-lesson-link" onclick="switchSections('.intermediate-lesson', '.intermediate-lesson-link', ' active-lesson', 2)" >Verb</li>
+                    <li class="lesson-link intermediate-lesson-link" onclick="switchSections('.intermediate-lesson', '.intermediate-lesson-link', ' active-lesson', 3)" >Adjective</li>
+                    <li class="lesson-link intermediate-lesson-link" onclick="switchSections('.intermediate-lesson', '.intermediate-lesson-link', ' active-lesson', 4)" >Adverb</li>
+                    <li class="lesson-link intermediate-lesson-link" onclick="switchSections('.intermediate-lesson', '.intermediate-lesson-link', ' active-lesson', 5)" >Conjunction</li>
+                    <li class="lesson-link intermediate-lesson-link" onclick="switchSections('.intermediate-lesson', '.intermediate-lesson-link', ' active-lesson', 6)" >Preposition</li>
+                </nav>
+                <div class="intermediate-lesson">
+                    
+                    <section class="lesson-box">
+                            <h3 class="lesson-title">Noun</h3>
+                            <div class="item-box" id="noun-box"></div>
+                            <!-- <button class="prev" onclick="nounLesson.getPreviousItem('noun-box')" >Prev</button> -->
+                            <!-- <button class="next" onclick="nounLesson.getNextItem('noun-box')" >Next</button> -->
+                    </section>
+                    <section class="description-box"></section>
+                </div>
+                <div class="intermediate-lesson">
+                    
+                    <section class="lesson-box">
+                            <h3 class="lesson-title">Pronoun</h3>
+                            <div class="item-box" id="pronoun-box"></div>
+                            <!-- <button class="prev" onclick="pronounLesson.getPreviousItem('pronoun-box')" >Prev</button> -->
+                            <!-- <button class="next" onclick="pronounLesson.getNextItem('pronoun-box')" >Next</button> -->
+                    </section>
+                    <section class="description-box"></section>
+                </div>
+                <div class="intermediate-lesson">
+                    
+                    <section class="lesson-box">
+                            <h3 class="lesson-title">Verb</h3>
+                            <div class="item-box" id="verb-box"></div>
+                            <!-- <button class="prev" onclick="verbLesson.getPreviousItem('verb-box')" >Prev</button> -->
+                            <!-- <button class="next" onclick="verbLesson.getNextItem('verb-box')" >Next</button> -->
+                    </section>
+                    <section class="description-box"></section>
+                </div>
+                <div class="intermediate-lesson">
+                    
+                    <section class="lesson-box">
+                            <h3 class="lesson-title">Adjective</h3>
+                            <div class="item-box" id="adjective-box"></div>
+                            <!-- <button class="prev" onclick="adjectiveLesson.getPreviousItem('adjective-box')" >Prev</button> -->
+                            <!-- <button class="next" onclick="adjectiveLesson.getNextItem('adjective-box')" >Next</button> -->
+                    </section>
+                    <section class="description-box"></section>
+                </div>
+                <div class="intermediate-lesson">
+                    
+                    <section class="lesson-box">
+                            <h3 class="lesson-title">Adverb</h3>
+                            <div class="item-box" id="adverb-box"></div>
+                            <button class="prev" onclick="adverbLesson.getPreviousItem('adverb-box')" >Prev</button>
+                            <button class="next" onclick="adverbLesson.getNextItem('adverb-box')" >Next</button>
+                    </section>
+                    <section class="description-box"></section>
+                </div>
+                <div class="intermediate-lesson">
+                   
+                    <section class="lesson-box">
+                            <h3 class="lesson-title">Conjunction</h3>
+                            <div class="item-box" id="conjunction-box"></div>
+                            <!-- <button class="prev" onclick="conjunctionLesson.getPreviousItem('conjunction-box')" >Prev</button> -->
+                            <!-- <button class="next" onclick="conjunctionLesson.getNextItem('conjunction-box')" >Next</button> -->
+                    </section>
+                    <section class="description-box"></section>
+                </div>
+                <div class="intermediate-lesson">
+                    
+                    <section class="lesson-box">
+                            <h3 class="lesson-title">Preposition</h3>
+                            <div class="item-box" id="preposition-box"></div>
+                            <!-- <button class="prev" onclick="prepositionLesson.getPreviousItem('preposition-box')" >Prev</button> -->
+                            <!-- <button class="next" onclick="prepositionLesson.getNextItem('preposition-box')" >Next</button> -->
+                    </section>
+                    <section class="description-box"></section>
+                </div>
+                </section>
+            <section class="levels">
+                <h2 class="level-title">Sentences</h2>
+                <nav class="level-nav">
+                    <li class="lesson-link advanced-lesson-link" onclick="switchSections('.advanced-lesson', '.advanced-lesson-link', ' active-lesson', 0)" >Present</li>
+                    <li class="lesson-link advanced-lesson-link" onclick="switchSections('.advanced-lesson', '.advanced-lesson-link', ' active-lesson', 1)" >Past</li>
+                    <li class="lesson-link advanced-lesson-link" onclick="switchSections('.advanced-lesson', '.advanced-lesson-link', ' active-lesson', 2)" >Future</li>
+                </nav>
+                <div class="advanced-lesson">
+                    
+                    <section class="lesson-box">
+                        <h3 class="lesson-title">Present</h3>
+                        <div class="item-box" id="present-box"></div>
+                        <!-- <button class="prev" onclick="presentLesson.getPreviousItem('present-box')" >Prev</button> -->
+                        <!-- <button class="next" onclick="presentLesson.getNextItem('present-box')" >Next</button> -->
+                    </section>
+                    <section class="description-box"></section>
+                </div>
+                <div class="advanced-lesson">
+                    
+                    <section class="lesson-box">
+                        <h3 class="lesson-title">Past</h3>
+                        <div class="item-box" id="past-box"></div>
+                        <!-- <button class="prev" onclick="pastLesson.getPreviousItem('past-box')" >Prev</button> -->
+                        <!-- <button class="next" onclick="pastLesson.getNextItem('past-box')" >Next</button> -->
+                    </section>
+                    <section class="description-box"></section>
+                </div>
+                <div class="advanced-lesson">
+                    
+                    <section class="lesson-box">
+                        <h3 class="lesson-title">Future</h3>
+                        <div class="item-box" id="future-box"></div>
+                        <!-- <button class="prev" onclick="futureLesson.getPreviousItem('future-box')" >Prev</button> -->
+                        <!-- <button class="next" onclick="futureLesson.getNextItem('future-box')" >Next</button> -->
+                    </section>
+                    <section class="description-box"></section>
+                </div>
+            
+            </section>
+            <section class="levels">
+                <h2 class="level-title">Readings</h2>
+                <nav class="level-nav">
+                    <li class="lesson-link about-section-link" onclick="switchSections('.about-section', '.about-section-link', ' active-lesson', 0)" >Beginner</li>
+                    <li class="lesson-link about-section-link" onclick="switchSections('.about-section', '.about-section-link', ' active-lesson', 1)" >Intermediate</li>
+                    <li class="lesson-link about-section-link" onclick="switchSections('.about-section', '.about-section-link', ' active-lesson', 2)" >Advanced</li>
+                    <li class="lesson-link about-section-link" onclick="switchSections('.about-section', '.about-section-link', ' active-lesson', 3)" >Native</li>
+                </nav>
+                <div class="about-section">
+                   
+                    <section class="lesson-box">
+                        <h3 class="lesson-title">Beginner</h3>
+                        <div class="item-box" id="beginner-box"></div>
+                        <!-- <button class="prev" onclick="beginnerReadings.getPreviousItem('beginner-box')" >Prev</button> -->
+                        <!-- <button class="next" onclick="beginnerReadings.getNextItem('beginner-box')" >Next</button> -->
+                    </section>
+                    <section class="description-box"></section>
+                </div>
+                <div class="about-section">
+                    
+                    <section class="lesson-box">
+                        <h3 class="lesson-title">Intermediate</h3>
+                        <div class="item-box" id="intermediate-box"></div>
+                        <!-- <button class="prev" onclick="intermediateReadings.getPreviousItem('intermediate-box')" >Prev</button> -->
+                        <!-- <button class="next" onclick="intermediateReadings.getNextItem('intermediate-box')" >Next</button> -->
+                    </section>
+                    <section class="description-box"></section>
+                </div>
+                <div class="about-section">
+                    
+                    <section class="lesson-box">
+                        <h3 class="lesson-title">Advanced</h3>
+                        <div class="item-box" id="advanced-box"></div>
+                        <!-- <button class="prev" onclick="advancedReadings.getPreviousItem('advanced-box')" >Prev</button> -->
+                        <!-- <button class="next" onclick="advancedReadings.getNextItem('advanced-box')" >Next</button> -->
+                    </section>
+                    <section class="description-box"></section>
+                </div>
+                <div class="about-section">
+                   
+                    <section class="lesson-box">
+                        <h3 class="lesson-title">Native</h3>
+                        <div class="item-box" id="native-box"></div>
+                        <!-- <button class="prev" onclick="nativeReadings.getPreviousItem('native-box')" >Prev</button> -->
+                        <!-- <button class="next" onclick="nativeReadings.getNextItem('native-box')" >Next</button> -->
+                    </section>
+                    <section class="description-box"></section>
+                </div>
+            </section>
         </main>
-        <!--Lesson Page Ends -->
+        <!--Lesson Page Ends-->
     </section>
     <script src="main.js" ></script>
 </body>

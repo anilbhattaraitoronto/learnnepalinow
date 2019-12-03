@@ -8,13 +8,19 @@
     --themeRed: rgb(134, 9, 34);
     --themeWhite: rgb(240, 240, 248);
 }
-
-body, #app-wrapper{
+body{
     font-family: Arial;
     width: 100%;
-    max-width: 600px;
+    margin: auto;
+}
+
+ #app-wrapper{
+    width: 100%;
+    max-width: 340px;
     margin: auto;
     line-height: 1.6;
+    background: var(--themeBlue, darkblue);
+    padding: 10px 0;
 }
 #landing-page{
     width: 99%;
@@ -23,8 +29,11 @@ body, #app-wrapper{
     padding: 5px 0;
     background: var(--themeBlue, darkblue);
 }
-#landing-header{
+#main-header{
     text-align: center;
+    width: 100%;
+    max-width: 340px;
+    margin: auto;
 }
 .masthead{
     cursor: pointer;
@@ -58,6 +67,7 @@ body, #app-wrapper{
     word-spacing: 3px;
     font-weight: 400;
     color: var(--themeWhite, white);
+    text-align: center;
     
 }
 .animate-characters{
@@ -128,6 +138,332 @@ body, #app-wrapper{
     max-width: 340px;
     margin: 10px auto;
     padding: 5px 0;
-    background: var(--themeRed, darkred);
 }
-.main-pages{}
+.main-pages{
+    background: var(--themeBlue, darkblue);
+}
+
+#lesson-page{
+    margin: auto;
+}
+#home-page h3{
+    margin: auto;
+    /* border-radius: 8px; */
+    padding: 5px 0 0 0;
+    color: white;
+}
+.why-nepali{
+    width: 80%;
+    padding: 5px;
+    margin: auto;
+    box-shadow: 0 0 3px var(--theme2);
+    border-radius: 8px;
+    /* border: 1px solid var(--theme2); */
+}
+.why-nepali li{
+    list-style-type: none;
+    padding: 12px 0;
+    color: var(--theme2);
+    font-size: .8em;
+    box-shadow: 0 0 1px white;
+}
+#home-page #start-lesson-button{
+    border:none;
+    height: 150px;
+    width: 150px;
+    cursor: pointer;
+    margin: 8px auto;
+    font-size: 1.2em;
+    border-radius: 50%;
+    background: white;
+    color: var(--theme1);
+    transition: 400ms ease-out;
+    animation: masthead 5s ease-in-out infinite alternate;
+}
+#home-page #start-lesson-button:hover{
+    box-shadow: 0 0 20px white;
+}
+.main-nav{
+    width: 330px;
+    margin: auto;
+    text-align: center;
+}
+.level-nav{
+    width: 330px;
+    margin: auto;
+    text-align: center;
+}
+.level-link{
+    display: inline-block;
+    list-style-type: none;
+    color: white;
+    cursor: pointer;
+    font-size: .8em;
+    padding: 2px 8px;
+    box-shadow: 1px 0 0;
+    border-top-right-radius: 4px;
+    font-weight: 600;
+}
+.level-link:hover{
+    color: var(--theme2);
+}
+
+.lesson-link{
+    display: inline-block;
+    list-style-type: none;
+    color: white;
+    cursor: pointer;
+    font-size: .8em;
+    padding: 2px;
+    box-shadow: 1px 0px 0px white;
+    border-top-right-radius: 8px;
+    font-weight: 500;
+}
+.active-level{
+    color: var(--theme2);
+}
+.active-lesson, .lesson-link:hover{
+color: darkgreen;
+background: white;
+}
+.level-title{
+    width: 250px;
+    background: white;
+    text-align: center;
+    color: darkgreen;
+    margin: 10px auto;
+    padding: 5px 0;
+    text-transform: uppercase;
+    font-size: .9em;
+    letter-spacing: 1px;
+}
+.beginner-lesson, .intermediate-lesson, .advanced-lesson, .about-section{
+    margin: auto;
+    text-align: center;
+}
+.lesson-title{
+    position: absolute;
+    top: 2px;
+    color: var(--theme1);
+    padding: 5px 0;
+}
+.lesson-box{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    background: white;
+    margin: 0 auto 20px auto;
+    box-shadow: 1px 1px 2px gray;
+    border-radius: 8px;
+}
+#vowel-box >.nepali, #syllable-box >.nepali, #compound-box >.nepali{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: var(--theme1);
+    color: white;
+    font-size: 4em;
+    line-height: 0;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+}
+#vowel-box >.english, #compound-box >.english, #syllable-box >.english{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: var(--theme2);
+    padding: 10px;
+    border-radius: 50%;
+    background: var(--theme1);
+    box-shadow: 0 0 5px white;
+    font-size: 1.3em;
+}
+#vowel-box >.sound, #syllable-box > .sound, #compound-box > .sound{
+    width: 160px;
+    height: 20px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-radius: 10px;
+    padding: 0;
+    border: none;
+}
+#vowel-box >.picture, #compound-box > .picture, #syllable-box > .picture{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+#noun-box > .sound, #pronoun-box > .sound, #verb-box > .sound, #adjective-box > .sound, #adverb-box > .sound, #conjunction-box > .sound, #preposition-box > .sound, #present-box > .sound, #past-box > .sound, #future-box > .sound, #beginner-box > .sound, #intermediate-box > .sound, #advanced-box > .sound, #native-box > .sound{
+    display: none;
+
+}
+#noun-box > .picture, #pronoun-box > .picture, #verb-box > .picture, #adjective-box > .picture, #adverb-box > .picture, #conjunction-box > .picture, #preposition-box > .picture{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 120px;
+    background: var(--theme1);
+    border-radius: 8px;
+    color: white;
+}
+#noun-box > .nepali, #pronoun-box > .nepali, #verb-box > .nepali, #adjective-box > .nepali, #adverb-box > .nepali, #conjunction-box > .nepali, #preposition-box > .nepali {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 130px;
+    width: 130px;
+    padding: 8px;
+    border-radius: 8px;
+    color: var(--theme1);
+    right: 2px;
+    bottom: 2px;
+    box-shadow: 0 0 2px var(--theme1);
+}
+#noun-box > .english, #pronoun-box > .english, #verb-box > .english, #adjective-box > .english, #adverb-box > .english, #conjunction-box > .english, #preposition-box > .english {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    bottom: 2px;
+    left: 2px;
+    text-align: center;
+    border-radius: 8px;
+    color: var(--theme1);
+    box-shadow: 0 0 2px var(--theme1);
+}
+#present-box > .picture, #past-box > .picture, #future-box > .picture{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 200px;
+    height: 120px;
+    background: var(--theme1);
+    color: white;
+    border-radius: 8px;
+}
+#present-box > .nepali, #past-box > .nepali, #future-box > .nepali{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 30px;
+    width: 280px;
+    height: 50px;
+    border: 1px solid var(--theme1);
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--theme1);
+}
+#present-box > .english, #past-box > .english, #future-box > .english{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 30px;
+    width: 280px;
+    height: 50px;
+    border: 1px solid var(--theme1);
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--theme1);
+}
+
+#beginner-box > .picture, #intermediate-box > .picture, #advanced-box > .picture, #native-box > .picture{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--theme1);
+}
+
+#beginner-box > .nepali, #intermediate-box > .nepali, #advanced-box > .nepali, #native-box > .nepali{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 220px;
+    height: 220px;
+    box-shadow: 0 0 2px var(--theme1);
+    border-radius: 8px;
+    color: var(--theme1);
+    padding: 8px;
+    text-align: left;
+
+}
+#beginner-box > .english, #intermediate-box > .english, #advanced-box > .english, #native-box > .english{
+    display: none;
+}
+
+.prev{
+    cursor: pointer;
+    border: none;
+    padding: 5px;
+    font-size: .8em;
+    background: var(--theme1);
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    box-shadow: 0 0 3px white;
+}
+.next{
+    cursor: pointer;
+    border: none;
+    padding: 5px;
+    font-size: .8em;
+    background: var(--theme1);
+    color: white;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    box-shadow: 0 0 1px white;
+}
+.prev:hover, .next:hover{
+    color: var(--theme2);
+}
+#syllable-description{
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    grid-gap: 5px;
+    margin: auto;
+    border: 1px solid var(--theme1);
+}
+#vowel-description, #compound-description{
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    grid-gap: 5px;
+    margin: auto;
+    border: 1px solid var(--theme1);
+}
+#vowel-description >div, #syllable-description > div, #compound-description > div{
+    background: white;
+    border-radius: 2px;
+}
+footer{
+    margin: auto;
+    color: var(--theme2);
+    padding: 10px 0;
+    text-align: center;
+    font-size: .8em;
+    font-weight: 600;
+}
