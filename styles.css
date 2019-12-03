@@ -90,21 +90,22 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 200px;
-    width: 200px;
+    height: 155px;
+    width: 155px;
     margin: auto;
     border-radius: 50%;
     background:var(--themeWhite, white);
 }
 #start-button{
+    display: block;
     cursor: pointer;
     border: 0 none;
     background: none;
-    width: 180px;
-    height: 180px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     background: var(--themeBlue, darkblue);
-    font-size: 24px;
+    font-size: 20px;
     color: var(--themeWhite, white);
     transition: 300ms ease-in-out;
 }
@@ -122,6 +123,11 @@ body{
 .why-nepali-title{
     text-align: center;
     color: var(--themeRed, darkred);
+}
+.why-nepali-title img{
+    width: 24px;
+    height: 24px;
+    padding-top: 12px;
 }
 #why-nepali ul{
     color: var(--themeWhite, white);
