@@ -1,0 +1,133 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+*{
+    margin: 0;
+    padding: 0;
+    --themeBlue: rgb(7, 7, 100);
+    --themeRed: rgb(134, 9, 34);
+    --themeWhite: rgb(240, 240, 248);
+}
+
+body, #app-wrapper{
+    font-family: Arial;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    line-height: 1.6;
+}
+#landing-page{
+    width: 99%;
+    max-width: 340px;
+    margin: auto;
+    padding: 5px 0;
+    background: var(--themeBlue, darkblue);
+}
+#landing-header{
+    text-align: center;
+}
+.masthead{
+    cursor: pointer;
+    text-align: center;
+    width: 90%;
+    margin: auto;
+    background: var(--themeWhite, white);
+    color: var(--themeRed, darkred);
+    word-spacing: 5px;
+    border-radius: 4px;
+}
+.masthead:hover{
+    color: var(--themeBlue, darkblue);
+}
+.masthead::after{
+    content: "a new language, a whole new world";
+    display: block;
+    text-transform: capitalize;
+    font-size: 10px;
+    color: var(--themeBlue);
+    word-spacing: 2px;
+    font-style: italic;
+    margin-top: -8px;
+}
+#landing-animated-characters{
+    overflow: hidden;
+    white-space: nowrap;
+    width: 90%;
+    margin: 10px auto;
+    font-size: 15px;
+    word-spacing: 3px;
+    font-weight: 400;
+    color: var(--themeWhite, white);
+    
+}
+.animate-characters{
+    animation: typing 2s 1s steps(20, end) infinite alternate-reverse;
+}
+@keyframes typing{
+    from { width: 0;}
+    to { width: 100%}
+}
+#start-button-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 200px;
+    margin: auto;
+    border-radius: 50%;
+    background:var(--themeWhite, white);
+}
+#start-button{
+    cursor: pointer;
+    border: 0 none;
+    background: none;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: var(--themeBlue, darkblue);
+    font-size: 24px;
+    color: var(--themeWhite, white);
+    transition: 300ms ease-in-out;
+}
+#start-button:hover{
+    background: var(--themeRed, darkred);
+    /* color: var(--themeRed, darkred); */
+}
+#why-nepali{
+    width: 95%;
+    margin: 5px auto;
+    background: var(--themeWhite, white);
+    padding: 2px;
+    border-radius: 4px;
+}
+.why-nepali-title{
+    text-align: center;
+    color: var(--themeRed, darkred);
+}
+#why-nepali ul{
+    color: var(--themeWhite, white);
+    background: var(--themeBlue, darkblue);
+    border-radius: 4px;
+    padding: 2px;
+}
+#why-nepali li{
+    list-style-type: none;
+    /* color: var(--themeBlue); */
+    text-align: center;
+    /* line-height: 1.8; */
+    box-shadow: 0 0 1px var(--themeWhite);
+    /* margin: 3px auto; */
+}
+/* LANDING PAGE STYLES ABOVE */
+
+
+/* LESSON PAGE STYLES BELOW */
+
+#lesson-page{
+    width: 98%;
+    max-width: 340px;
+    margin: 10px auto;
+    padding: 5px 0;
+    background: var(--themeRed, darkred);
+}
+.main-pages{}
