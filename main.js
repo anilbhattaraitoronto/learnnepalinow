@@ -68,6 +68,11 @@ function startApp() {
     switchSections('.main-pages', '.main-link', ' active-main-link', 0)
     let animatedContainer = document.querySelector("#landing-animated-characters")
     animatedContainer.classList.toggle("animate-characters")
+    switchSections('.levels', '.level-link', ' active-level', 0);
+    switchSections('.beginner-lesson', '.beginner-lesson-link', ' active-lesson', 0);
+    switchSections('.intermediate-lesson', '.intermediate-lesson-link', ' active-lesson', 0);
+    switchSections('.advanced-lesson', '.advanced-lesson-link', ' active-lesson', 0);
+    switchSections('.about-section', '.about-section-link', ' active-lesson', 0);
 }
 
 startButton.addEventListener('click', () => {
