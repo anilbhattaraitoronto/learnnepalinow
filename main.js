@@ -126,6 +126,7 @@ let nounLesson = new Lesson(
     "Nouns are things, people's proper names, place names, etc. You know what I mean. Practice, practice, practice. I cannot emphasize it enough."
 );
 nounLesson.getItem("noun-box");
+nounLesson.getDescription("noun-description")
 
 let pronounLesson = new Lesson(
     ['नेपाली'],
@@ -135,6 +136,7 @@ let pronounLesson = new Lesson(
     "Pronouns are nouns that represent various nouns. Like I am Anil. My pronoun here is I. "
 );
 pronounLesson.getItem("pronoun-box");
+pronounLesson.getDescription("pronoun-description")
 
 let verbLesson = new Lesson(
     ['नेपाली'],
@@ -144,6 +146,7 @@ let verbLesson = new Lesson(
     "Verbs are about action in the world. "
 );
 verbLesson.getItem("verb-box");
+verbLesson.getDescription("verb-description")
 
 let adjectiveLesson = new Lesson(
     ['नेपाली'],
@@ -153,6 +156,7 @@ let adjectiveLesson = new Lesson(
     "Adjectives add color to the world. Meaning, it represents the quality of objects/nouns."
 );
 adjectiveLesson.getItem("adjective-box");
+adjectiveLesson.getDescription("adjective-description")
 
 let adverbLesson = new Lesson(
     ['नेपाली'],
@@ -163,6 +167,7 @@ let adverbLesson = new Lesson(
 
 );
 adverbLesson.getItem("adverb-box");
+adverbLesson.getDescription("adverb-description")
 
 let conjunctionLesson = new Lesson(
     ['नेपाली'],
@@ -172,6 +177,7 @@ let conjunctionLesson = new Lesson(
     "Conjunctions connect different things."
 );
 conjunctionLesson.getItem("conjunction-box");
+conjunctionLesson.getDescription("conjunction-description")
 
 let prepositionLesson = new Lesson(
     ['नेपाली'],
@@ -181,6 +187,7 @@ let prepositionLesson = new Lesson(
     "Prepositions are about the placements."
 );
 prepositionLesson.getItem("preposition-box");
+prepositionLesson.getDescription("preposition-description")
 
 
 //Sentences Lessons
@@ -193,6 +200,7 @@ let presentLesson = new Lesson(
     "Nepali sentence is organized as (Subject Object Verb). I home go. म घर जान्छु।"
 );
 presentLesson.getItem("present-box")
+presentLesson.getDescription("present-description")
 
 let pastLesson = new Lesson(
     ["मेरो नाम अनिल थियो।"],
@@ -202,6 +210,7 @@ let pastLesson = new Lesson(
     "Past sentences describe things that happened in the past."
 );
 pastLesson.getItem("past-box");
+pastLesson.getDescription("past-description")
 
 let futureLesson = new Lesson(
     ["मेरो नाम अनिल हुनेछ।"],
@@ -211,6 +220,7 @@ let futureLesson = new Lesson(
     "Future sentences describe things that will happen in future. Obviously, indeed."
 );
 futureLesson.getItem("future-box");
+futureLesson.getDescription("future-description")
 
 // Readings Lessons
 
@@ -249,6 +259,7 @@ let beginnerReadings = new Lesson(
     "Beginner lesson will focus on simple constructions of words and sentences."
 );
 beginnerReadings.getItem("beginner-box");
+beginnerReadings.getDescription("beginner-description")
 
 let intermediateReadings = new Lesson(
     [
@@ -285,6 +296,7 @@ let intermediateReadings = new Lesson(
     "We will move up the ladder as we keep practicing our reading skills. Have you finished reading these twenty blocks of writings? Do finish. "
 );
 intermediateReadings.getItem("intermediate-box");
+intermediateReadings.getDescription("intermediate-description")
 
 let advancedReadings = new Lesson(
     [
@@ -321,6 +333,7 @@ let advancedReadings = new Lesson(
     "At advanced level, you are almost like a Nepali person. Like my french level now. Maybe a bit better than that. "
 );
 advancedReadings.getItem("advanced-box");
+adverbLesson.getDescription("advanced-description")
 
 let nativeReadings = new Lesson(
     [
@@ -357,3 +370,4 @@ let nativeReadings = new Lesson(
     "This is where you will feel that you are born in Nepali family speaking Nepali day in day out. Welcome. Venture out. Practice, practice, practice."
 );
 nativeReadings.getItem("native-box");
+nativeReadings.getDescription("native-description")
