@@ -1,9 +1,5 @@
 startApp()
 
-let startButton = document.getElementById('start-button')
-let lessonMasthead = document.querySelector(".masthead")
-
-
 function switchSections(sectionClass, linkClass, activeLinkClass, index = 0) {
     let sections = document.querySelectorAll(sectionClass)
     let navLinks = document.querySelectorAll(linkClass)
@@ -11,34 +7,38 @@ function switchSections(sectionClass, linkClass, activeLinkClass, index = 0) {
         section.style.display = 'none'
     })
     navLinks.forEach(navLink => {
-        navLink.className = navLink.className.replace(activeLinkClass, ' ');
-        //what to replace = activeClass, what to replace with = ' '
+        navLink.classList.remove(activeLinkClass)
     })
     sections[index].style.display = 'block'
-    navLinks[index].className += activeLinkClass
+    navLinks[index].classList.add(activeLinkClass)
 }
 
 function startApp() {
+    let startButton = document.getElementById('start-button')
+    let lessonMasthead = document.querySelector(".masthead")
+
     let animatedContainer = document.querySelector("#landing-animated-characters")
     animatedContainer.classList.toggle("animate-characters")
-    switchSections('.main-pages', '.main-link', ' active-main-link', 0)
-    switchSections('.levels', '.level-link', ' active-level', 0)
-    switchSections('.beginner-lesson', '.beginner-lesson-link', ' active-lesson', 0)
-    switchSections('.intermediate-lesson', '.intermediate-lesson-link', ' active-lesson', 0)
-    switchSections('.advanced-lesson', '.advanced-lesson-link', ' active-lesson', 0)
-    switchSections('.about-section', '.about-section-link', ' active-lesson', 0)
+    switchSections('.main-pages', '.main-link', 'active-main-link', 0)
+    switchSections('.levels', '.level-link', 'active-level', 0)
+    switchSections('.beginner-lesson', '.beginner-lesson-link', 'active-lesson', 0)
+    switchSections('.intermediate-lesson', '.intermediate-lesson-link', 'active-lesson', 0)
+    switchSections('.advanced-lesson', '.advanced-lesson-link', 'active-lesson', 0)
+    switchSections('.about-section', '.about-section-link', 'active-lesson', 0)
+
+    startButton.addEventListener('click', () => {
+        switchSections('.main-pages', '.main-link', 'active-main-link', 1)
+        let animatedContainer = document.querySelector("#landing-animated-characters")
+        animatedContainer.classList.toggle("animate-characters")
+    })
+    lessonMasthead.addEventListener('click', () => {
+        switchSections('.main-pages', '.main-link', 'active-main-link', 0)
+        let animatedContainer = document.querySelector("#landing-animated-characters")
+        animatedContainer.classList.toggle("animate-characters")
+    })
+
 }
 
-startButton.addEventListener('click', () => {
-    switchSections('.main-pages', '.main-link', ' active-main-link', 1)
-    let animatedContainer = document.querySelector("#landing-animated-characters")
-    animatedContainer.classList.toggle("animate-characters")
-})
-lessonMasthead.addEventListener('click', () => {
-    switchSections('.main-pages', '.main-link', ' active-main-link', 0)
-    let animatedContainer = document.querySelector("#landing-animated-characters")
-    animatedContainer.classList.toggle("animate-characters")
-})
 
 //Lesson constructor (sort of) function
 
@@ -372,3 +372,42 @@ let nativeReadings = new Lesson(
 );
 nativeReadings.getItem("native-box")
 nativeReadings.getDescription("native-description")
+
+//switch items with button events
+function buttonEvents(prevId, nextId, lesson, lessonBoxId) {
+    let prevButton = document.getElementById(prevId)
+    prevButton.addEventListener("click", function () {
+        lesson.getPreviousItem(lessonBoxId)
+    })
+    let nextButton = document.getElementById(nextId)
+    nextButton.addEventListener("click", function () {
+        lesson.getNextItem(lessonBoxId)
+    })
+}
+//Letter Lessons button events
+buttonEvents('prevVowel', 'nextVowel', vowelLesson, 'vowel-box')
+buttonEvents('prevSyllable', 'nextSyllable', syllableLesson, 'syllable-box')
+buttonEvents('prevCompound', 'nextCompound', compoundLesson, 'compound-box')
+
+//Word Lessons button events
+
+buttonEvents('prevNoun', 'nextNoun', nounLesson, 'noun-box')
+buttonEvents('prevPronoun', 'nextPronoun', pronounLesson, 'pronoun-box')
+buttonEvents('prevVerb', 'nextVerb', verbLesson, 'verb-box')
+buttonEvents('prevAdjective', 'nextAdjective', adjectiveLesson, 'adjective-box')
+buttonEvents('prevAdverb', 'nextAdverb', adverbLesson, 'adverb-box')
+buttonEvents('prevConjunction', 'nextConjunction', conjunctionLesson, 'conjunction-box')
+buttonEvents('prevPreposition', 'nextPreposition', prepositionLesson, 'preposition-box')
+
+//Sentence Lessons button events
+
+buttonEvents('prevPresent', 'nextPresent', presentLesson, 'present-box')
+buttonEvents('prevPast', 'nextPast', pastLesson, 'past-box')
+buttonEvents('prevFuture', 'nextFuture', futureLesson, 'future-box')
+
+//Reading Lessons button events
+
+buttonEvents('prevBeginner', 'nextBeginner', beginnerReadings, 'beginner-box')
+buttonEvents('prevIntermediate', 'nextIntermediate', intermediateReadings, 'intermediate-box')
+buttonEvents('prevAdvanced', 'nextAdvanced', advancedReadings, 'advanced-box')
+buttonEvents('prevNative', 'nextNative', nativeReadings, 'native-box')
