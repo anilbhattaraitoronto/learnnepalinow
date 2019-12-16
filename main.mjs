@@ -16,7 +16,6 @@ function switchSections(sectionClass, linkClass, activeLinkClass, index = 0) {
 function loadApp() {
     let startButton = document.getElementById('start-button')
     let lessonMasthead = document.querySelector(".masthead")
-
     let animatedContainer = document.querySelector("#landing-animated-characters")
     animatedContainer.classList.toggle("animate-characters")
     switchSections('.main-pages', '.main-link', 'active-main-link', 0)
@@ -428,12 +427,16 @@ function mainNavEvents(id, sectionClass, linkClass) {
     }
     let navItem = document.getElementById(id)
 
+
     navItem.addEventListener('click', function (event) {
-        let links = document.querySelectorAll(linkClass)
-        let targetItem = event.target
-        let index = Array.from(links).indexOf(targetItem)
-        switchSections(sectionClass, linkClass, activeLinkClass, index)
+        if (event.target.parentElement === navItem) {
+            let links = document.querySelectorAll(linkClass)
+            let targetItem = event.target
+            let index = Array.from(links).indexOf(targetItem)
+            switchSections(sectionClass, linkClass, activeLinkClass, index)
+        }
     })
+
 }
 
 
