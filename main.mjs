@@ -1,12 +1,12 @@
-import { switchSections } from './js/switchSections.mjs'
-import { Lesson } from './js/lessonClass.mjs'
-import { vowelLesson, syllableLesson, compoundLesson } from './js/data/letters.mjs'
-import { nounLesson, pronounLesson, verbLesson, adjectiveLesson, adverbLesson, conjunctionLesson, prepositionLesson } from './js/data/words.mjs'
-import { presentLesson, pastLesson, futureLesson } from './js/data/sentences.mjs'
-import { beginnerReadings, intermediateReadings, advancedReadings, nativeReadings } from './js/data/readings.mjs'
+import { switchSections } from '/js/switchSections.mjs'
+import { Lesson } from '/js/lessonClass.mjs'
+import { vowelLesson, syllableLesson, compoundLesson } from '/js/data/letters.mjs'
+import { nounLesson, pronounLesson, verbLesson, adjectiveLesson, adverbLesson, conjunctionLesson, prepositionLesson } from '/js/data/words.mjs'
+import { presentLesson, pastLesson, futureLesson } from '/js/data/sentences.mjs'
+import { beginnerReadings, intermediateReadings, advancedReadings, nativeReadings } from '/js/data/readings.mjs'
 
-import { buttonEvents } from './js/events/buttonEvents.mjs'
-import { mainNavEvents } from './js/events/mainNavEvents.mjs'
+import { buttonEvents } from '/js/events/buttonEvents.mjs'
+import { mainNavEvents } from '/js/events/mainNavEvents.mjs'
 
 loadApp()
 
