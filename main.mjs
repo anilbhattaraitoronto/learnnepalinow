@@ -37,7 +37,6 @@ function loadApp() {
     //EVENTS HANDLING
 
     //navigating main pages and sections
-
     mainNavEvents('mainNav', '.levels', '.level-link')
     mainNavEvents('beginnerLevelNav', '.beginner-lesson', '.beginner-lesson-link')
     mainNavEvents('intermediateLevelNav', '.intermediate-lesson', '.intermediate-lesson-link')
@@ -51,7 +50,6 @@ function loadApp() {
     buttonEvents('prevCompound', 'nextCompound', compoundLesson, 'compound-box')
 
     //Word Lessons button events
-
     buttonEvents('prevNoun', 'nextNoun', nounLesson, 'noun-box')
     buttonEvents('prevPronoun', 'nextPronoun', pronounLesson, 'pronoun-box')
     buttonEvents('prevVerb', 'nextVerb', verbLesson, 'verb-box')
@@ -61,13 +59,11 @@ function loadApp() {
     buttonEvents('prevPreposition', 'nextPreposition', prepositionLesson, 'preposition-box')
 
     //Sentence Lessons button events
-
     buttonEvents('prevPresent', 'nextPresent', presentLesson, 'present-box')
     buttonEvents('prevPast', 'nextPast', pastLesson, 'past-box')
     buttonEvents('prevFuture', 'nextFuture', futureLesson, 'future-box')
 
     //Reading Lessons button events
-
     buttonEvents('prevBeginner', 'nextBeginner', beginnerReadings, 'beginner-box')
     buttonEvents('prevIntermediate', 'nextIntermediate', intermediateReadings, 'intermediate-box')
     buttonEvents('prevAdvanced', 'nextAdvanced', advancedReadings, 'advanced-box')
@@ -75,7 +71,7 @@ function loadApp() {
 }
 
 
-//switch items with button events
+
 
 
 
