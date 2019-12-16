@@ -1,4 +1,4 @@
-import { Lesson } from '/js/lessonClass.mjs'
+import { Lesson } from './js/lessonClass.mjs'
 
 //Words Lessons
 export let nounLesson = new Lesson(

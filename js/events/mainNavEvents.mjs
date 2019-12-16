@@ -1,4 +1,4 @@
-import { switchSections } from '/js/switchSections.mjs'
+import { switchSections } from './js/switchSections.mjs'
 //Section Switch Events
 
 export function mainNavEvents(id, sectionClass, linkClass) {
