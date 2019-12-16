@@ -41,18 +41,18 @@
         <!-- --Lesson Page Begins Below-- -->
        <!--Lesson Page Begins-->
        <main class="main-pages" id="lesson-page">
-            <nav class="main-nav">
-                <li class="level-link" onclick="switchSections('.levels', '.level-link', 'active-level', 0)" >Letters</li>
-                <li class="level-link" onclick="switchSections('.levels', '.level-link', 'active-level', 1)" >Words</li>
-                <li class="level-link" onclick="switchSections('.levels', '.level-link', 'active-level', 2)" >Sentences</li>
-                <li class="level-link" onclick="switchSections('.levels', '.level-link', 'active-level', 3)" >Readings</li>
+            <nav class="main-nav" id="mainNav">
+                <li class="level-link">Letters</li>
+                <li class="level-link">Words</li>
+                <li class="level-link">Sentences</li>
+                <li class="level-link">Readings</li>
             </nav>
             <section class="levels">
                 <h2 class="level-title">Letters </h2>
-                <nav class="level-nav">
-                    <li class="lesson-link beginner-lesson-link" onclick="switchSections('.beginner-lesson', '.beginner-lesson-link', 'active-lesson', 0)" >Vowels</li>
-                    <li class="lesson-link beginner-lesson-link" onclick="switchSections('.beginner-lesson', '.beginner-lesson-link', 'active-lesson', 1)" >Syllables</li>
-                    <li class="lesson-link beginner-lesson-link" onclick="switchSections('.beginner-lesson', '.beginner-lesson-link', 'active-lesson', 2)" >Compounds</li>
+                <nav class="level-nav" id="beginnerLevelNav">
+                    <li class="lesson-link beginner-lesson-link">Vowels</li>
+                    <li class="lesson-link beginner-lesson-link">Syllables</li>
+                    <li class="lesson-link beginner-lesson-link">Compounds</li>
                 </nav>
                 <div class="beginner-lesson">
                     <section class="lesson-box">
@@ -86,14 +86,14 @@
             </section>
             <section class="levels">
                 <h2 class="level-title">Words </h2>
-                <nav class="level-nav">
-                    <li class="lesson-link intermediate-lesson-link" onclick="switchSections('.intermediate-lesson', '.intermediate-lesson-link', 'active-lesson', 0)" >Noun</li>
-                    <li class="lesson-link intermediate-lesson-link" onclick="switchSections('.intermediate-lesson', '.intermediate-lesson-link', 'active-lesson', 1)" >Pronoun</li>
-                    <li class="lesson-link intermediate-lesson-link" onclick="switchSections('.intermediate-lesson', '.intermediate-lesson-link', 'active-lesson', 2)" >Verb</li>
-                    <li class="lesson-link intermediate-lesson-link" onclick="switchSections('.intermediate-lesson', '.intermediate-lesson-link', 'active-lesson', 3)" >Adjective</li>
-                    <li class="lesson-link intermediate-lesson-link" onclick="switchSections('.intermediate-lesson', '.intermediate-lesson-link', 'active-lesson', 4)" >Adverb</li>
-                    <li class="lesson-link intermediate-lesson-link" onclick="switchSections('.intermediate-lesson', '.intermediate-lesson-link', 'active-lesson', 5)" >Conjunction</li>
-                    <li class="lesson-link intermediate-lesson-link" onclick="switchSections('.intermediate-lesson', '.intermediate-lesson-link', 'active-lesson', 6)" >Preposition</li>
+                <nav class="level-nav" id="intermediateLevelNav">
+                    <li class="lesson-link intermediate-lesson-link">Noun</li>
+                    <li class="lesson-link intermediate-lesson-link">Pronoun</li>
+                    <li class="lesson-link intermediate-lesson-link">Verb</li>
+                    <li class="lesson-link intermediate-lesson-link">Adjective</li>
+                    <li class="lesson-link intermediate-lesson-link">Adverb</li>
+                    <li class="lesson-link intermediate-lesson-link">Conjunction</li>
+                    <li class="lesson-link intermediate-lesson-link">Preposition</li>
                 </nav>
                 <div class="intermediate-lesson">
                     
@@ -168,10 +168,10 @@
                 </section>
             <section class="levels">
                 <h2 class="level-title">Sentences</h2>
-                <nav class="level-nav">
-                    <li class="lesson-link advanced-lesson-link" onclick="switchSections('.advanced-lesson', '.advanced-lesson-link', 'active-lesson', 0)" >Present</li>
-                    <li class="lesson-link advanced-lesson-link" onclick="switchSections('.advanced-lesson', '.advanced-lesson-link', 'active-lesson', 1)" >Past</li>
-                    <li class="lesson-link advanced-lesson-link" onclick="switchSections('.advanced-lesson', '.advanced-lesson-link', 'active-lesson', 2)" >Future</li>
+                <nav class="level-nav" id="advancedLevelNav">
+                    <li class="lesson-link advanced-lesson-link">Present</li>
+                    <li class="lesson-link advanced-lesson-link">Past</li>
+                    <li class="lesson-link advanced-lesson-link">Future</li>
                 </nav>
                 <div class="advanced-lesson">
                     
@@ -207,11 +207,11 @@
             </section>
             <section class="levels">
                 <h2 class="level-title">Readings</h2>
-                <nav class="level-nav">
-                    <li class="lesson-link about-section-link" onclick="switchSections('.about-section', '.about-section-link', 'active-lesson', 0)" >Beginner</li>
-                    <li class="lesson-link about-section-link" onclick="switchSections('.about-section', '.about-section-link', 'active-lesson', 1)" >Intermediate</li>
-                    <li class="lesson-link about-section-link" onclick="switchSections('.about-section', '.about-section-link', 'active-lesson', 2)" >Advanced</li>
-                    <li class="lesson-link about-section-link" onclick="switchSections('.about-section', '.about-section-link', 'active-lesson', 3)" >Native</li>
+                <nav class="level-nav" id="readingsNav">
+                    <li class="lesson-link about-section-link">Beginner</li>
+                    <li class="lesson-link about-section-link">Intermediate</li>
+                    <li class="lesson-link about-section-link">Advanced</li>
+                    <li class="lesson-link about-section-link">Native</li>
                 </nav>
                 <div class="about-section">
                    

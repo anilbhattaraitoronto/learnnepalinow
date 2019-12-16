@@ -1,4 +1,4 @@
-startApp()
+loadApp()
 
 function switchSections(sectionClass, linkClass, activeLinkClass, index = 0) {
     let sections = document.querySelectorAll(sectionClass)
@@ -13,7 +13,7 @@ function switchSections(sectionClass, linkClass, activeLinkClass, index = 0) {
     navLinks[index].classList.add(activeLinkClass)
 }
 
-function startApp() {
+function loadApp() {
     let startButton = document.getElementById('start-button')
     let lessonMasthead = document.querySelector(".masthead")
 
@@ -36,6 +36,11 @@ function startApp() {
         let animatedContainer = document.querySelector("#landing-animated-characters")
         animatedContainer.classList.toggle("animate-characters")
     })
+    mainNavEvents('mainNav', '.levels', '.level-link')
+    mainNavEvents('beginnerLevelNav', '.beginner-lesson', '.beginner-lesson-link')
+    mainNavEvents('intermediateLevelNav', '.intermediate-lesson', '.intermediate-lesson-link')
+    mainNavEvents('advancedLevelNav', '.advanced-lesson', '.advanced-lesson-link')
+    mainNavEvents('readingsNav', '.about-section', '.about-section-link')
 
 }
 
@@ -411,3 +416,24 @@ buttonEvents('prevBeginner', 'nextBeginner', beginnerReadings, 'beginner-box')
 buttonEvents('prevIntermediate', 'nextIntermediate', intermediateReadings, 'intermediate-box')
 buttonEvents('prevAdvanced', 'nextAdvanced', advancedReadings, 'advanced-box')
 buttonEvents('prevNative', 'nextNative', nativeReadings, 'native-box')
+
+//Section Switch Events
+
+function mainNavEvents(id, sectionClass, linkClass) {
+    if (id === 'mainNav') {
+        var activeLinkClass = 'active-level'
+    }
+    else {
+        var activeLinkClass = 'active-lesson'
+    }
+    let navItem = document.getElementById(id)
+
+    navItem.addEventListener('click', function (event) {
+        let links = document.querySelectorAll(linkClass)
+        let targetItem = event.target
+        let index = Array.from(links).indexOf(targetItem)
+        switchSections(sectionClass, linkClass, activeLinkClass, index)
+    })
+}
+
+
