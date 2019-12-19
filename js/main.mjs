@@ -1,5 +1,5 @@
 import { switchSections } from '/js/switchSections.mjs'
-import { Lesson } from '/js/lessonClass.mjs'
+//import lesson data and associated function created through construction function Lesson in lessonClass.mjs
 import { vowelLesson, syllableLesson, compoundLesson } from '/js/data/letters.mjs'
 import { nounLesson, pronounLesson, verbLesson, adjectiveLesson, adverbLesson, conjunctionLesson, prepositionLesson } from '/js/data/words.mjs'
 import { presentLesson, pastLesson, futureLesson } from '/js/data/sentences.mjs'
@@ -8,14 +8,14 @@ import { beginnerReadings, intermediateReadings, advancedReadings, nativeReading
 import { buttonEvents } from '/js/events/buttonEvents.mjs'
 import { mainNavEvents } from '/js/events/mainNavEvents.mjs'
 
-loadApp()
+loadApp('start-button', 'landing-masthead', 'landing-animated-characters', 'animate-characters')
 
 
-function loadApp() {
-    let startButton = document.getElementById('start-button')
-    let lessonMasthead = document.querySelector(".masthead")
-    let animatedContainer = document.querySelector("#landing-animated-characters")
-    animatedContainer.classList.toggle("animate-characters")
+function loadApp(startId, mastheadId, animationId, animateClass) {
+    let startButton = document.getElementById(startId)
+    let lessonMasthead = document.getElementById(mastheadId)
+    let animatedContainer = document.getElementById(animationId)
+    animatedContainer.classList.toggle(animateClass)
     switchSections('.main-pages', '.main-link', 'active-main-link', 0)
     switchSections('.levels', '.level-link', 'active-level', 0)
     switchSections('.beginner-lesson', '.beginner-lesson-link', 'active-lesson', 0)
@@ -25,13 +25,11 @@ function loadApp() {
 
     startButton.addEventListener('click', () => {
         switchSections('.main-pages', '.main-link', 'active-main-link', 1)
-        let animatedContainer = document.querySelector("#landing-animated-characters")
-        animatedContainer.classList.toggle("animate-characters")
+        animatedContainer.classList.toggle(animateClass)
     })
     lessonMasthead.addEventListener('click', () => {
         switchSections('.main-pages', '.main-link', 'active-main-link', 0)
-        let animatedContainer = document.querySelector("#landing-animated-characters")
-        animatedContainer.classList.toggle("animate-characters")
+        animatedContainer.classList.toggle(animateClass)
     })
 
     //EVENTS HANDLING
