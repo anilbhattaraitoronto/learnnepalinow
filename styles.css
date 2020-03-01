@@ -7,8 +7,8 @@
     /* --themeBlue: #003893; */
     /* --themeRed: #DC143C; */
     --themeWhite: #FFFFFF;
-    --themeBlue: rgb(7, 7, 100);
-    --themeRed: rgb(221, 11, 53);
+    --themeBlue: rgb(9, 91, 146);
+    --themeRed: rgb(180, 107, 12);
     /* --themeWhite: rgb(240, 240, 248); */
 }
 body{
@@ -253,6 +253,7 @@ background: white;
     height: 150px;
     width: 150px;
     border-radius: 50%;
+    z-index: 12;
 }
 #vowel-box >.english, #compound-box >.english, #syllable-box >.english{
     position: absolute;
@@ -266,15 +267,21 @@ background: white;
     font-size: 1.3em;
 }
 #vowel-box >.sound, #syllable-box > .sound, #compound-box > .sound{
-    width: 160px;
-    height: 20px;
+    width: 50px;
+    height: 50px;
     position: absolute;
-    bottom: 0;
-    right: 0;
-    border-radius: 10px;
+    top: 35%;
+    right: 25%;
+    transform: translate(0, -50%);
+    border-radius: 50%;
     padding: 0;
     border: none;
+    background: var(--themeBlue);
+    z-index: 0;
 }
+
+
+
 #vowel-box >.picture, #compound-box > .picture, #syllable-box > .picture{
     position: absolute;
     top: 10px;
@@ -421,20 +428,26 @@ background: white;
 .prev:hover, .next:hover{
     background: var(--themeRed, darkred);
 }
-#syllable-description{
-    display: grid;
-    grid-template-columns: repeat(5, auto);
-    grid-gap: 5px;
+.description-box{
+    width: 90%;
     margin: auto;
+    padding: 8px;
+    background: white;
+    border-radius: 8px;
+}
+#syllable-description{
+    /* display: grid;
+    grid-template-columns: repeat(5, auto);
+    grid-gap: 5px; */
+    
     border: 1px solid var(--themeBlue, darkblue);
 }
 #vowel-description, #compound-description{
-    width: 90%;
-    margin: auto;
+    
     border: 1px solid var(--themeBlue, darkblue);
 }
 #vowel-description >p, #syllable-description > p, #compound-description > p, #noun-description, #pronoun-description, #verb-description, #adjective-description, #adverb-description, #conjunction-description, #preposition-description, #present-description, #past-description, #future-description, #beginner-description, #intermediate-description, #advanced-description, #native-description{
-    background: var(--themeWhite, white);
+    
     border-radius: 2px;
 }
 footer{
